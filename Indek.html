@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisis Potensi Pasar dan Peluang Usaha - SMK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+        .progress-bar { transition: width 0.5s ease; }
+        .quiz-option { transition: all 0.2s ease; }
+        .quiz-option:hover { background-color: #f3f4f6; }
+        .quiz-correct { background-color: #d1fae5 !important; border-color: #10b981; }
+        .quiz-incorrect { background-color: #fee2e2 !important; border-color: #ef4444; }
+        
+        /* Custom Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes floating {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+            }
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+            }
+            50% {
+                box-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 30px rgba(59, 130, 246, 0.6);
+            }
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .floating-shape {
+            animation: floating 6s ease-in-out infinite;
+        }
+        
+        .animate-pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+        
+        .animate-slide-in-left {
+            animation: slideInLeft 0.6s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .animate-slide-in-right {
+            animation: slideInRight 0.6s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .animate-scale-in {
+            animation: scaleIn 0.5s ease-out forwards;
+            opacity: 0;
+        }
+        
+        /* Hover animations */
+        .hover-lift {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .hover-glow:hover {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+        }
+        
+        /* Loading animation */
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .animate-spin-slow {
+            animation: spin 3s linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-8 relative overflow-hidden">
+        <!-- Animated background elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="floating-shape absolute top-10 left-10 w-20 h-20 bg-white bg-opacity-10 rounded-full"></div>
+            <div class="floating-shape absolute top-20 right-20 w-16 h-16 bg-white bg-opacity-10 rounded-full" style="animation-delay: -2s;"></div>
+            <div class="floating-shape absolute bottom-10 left-1/4 w-12 h-12 bg-white bg-opacity-10 rounded-full" style="animation-delay: -4s;"></div>
+            <div class="floating-shape absolute bottom-20 right-1/3 w-24 h-24 bg-white bg-opacity-10 rounded-full" style="animation-delay: -1s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-6">
+                <div class="inline-block animate-bounce mb-4">
+                    <div class="text-6xl">📊</div>
+                </div>
+                <h1 class="text-4xl font-bold mb-4 animate-fade-in-up">Analisis Potensi Pasar & Peluang Usaha</h1>
+                
+                <!-- Teacher Info -->
+                <div class="mt-6 animate-fade-in-up" style="animation-delay: 0.4s;">
+                    <div class="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-3 backdrop-blur-sm">
+                        <div class="w-10 h-10 bg-white bg-opacity-30 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-2xl">👨‍🏫</span>
+                        </div>
+                        <div class="text-left">
+                            <p class="text-sm opacity-80">Pengajar:</p>
+                            <p class="font-semibold">Lukman, S.Pd, M.Si</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-6 bg-white bg-opacity-20 rounded-lg p-4 max-w-2xl mx-auto">
+                <div class="flex items-center justify-between text-sm">
+                    <span>Progress Pembelajaran:</span>
+                    <span id="progress-text">0%</span>
+                </div>
+                <div class="w-full bg-white bg-opacity-30 rounded-full h-2 mt-2">
+                    <div id="progress-bar" class="progress-bar bg-yellow-300 h-2 rounded-full" style="width: 0%"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6">
+            <div class="flex space-x-8 overflow-x-auto py-4">
+                <button onclick="showSection('overview')" class="nav-btn whitespace-nowrap px-4 py-2 rounded-lg font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 hover-glow transition-all duration-300">📋 Overview</button>
+                <button onclick="showSection('konsep')" class="nav-btn whitespace-nowrap px-4 py-2 rounded-lg font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 hover-glow transition-all duration-300">💡 Konsep Dasar</button>
+                <button onclick="showSection('analisis')" class="nav-btn whitespace-nowrap px-4 py-2 rounded-lg font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 hover-glow transition-all duration-300">🔍 Metode Analisis</button>
+                <button onclick="showSection('riset')" class="nav-btn whitespace-nowrap px-4 py-2 rounded-lg font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 hover-glow transition-all duration-300">📈 Riset Pasar</button>
+                <button onclick="showSection('studi-kasus')" class="nav-btn whitespace-nowrap px-4 py-2 rounded-lg font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 hover-glow transition-all duration-300">📚 Studi Kasus</button>
+                <button onclick="showSection('praktik')" class="nav-btn whitespace-nowrap px-4 py-2 rounded-lg font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 hover-glow transition-all duration-300">✏️ Latihan</button>
+                <button onclick="showSection('quiz')" class="nav-btn whitespace-nowrap px-4 py-2 rounded-lg font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 hover-glow transition-all duration-300">🎯 Kuis</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8">
+        <!-- Overview Section -->
+        <section id="overview" class="section">
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">📋 Overview Pembelajaran</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-blue-50 rounded-lg p-6 hover-lift animate-slide-in-left">
+                        <h3 class="text-xl font-semibold text-blue-800 mb-4">🎯 Tujuan Pembelajaran KIK</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start"><span class="text-blue-500 mr-2">✓</span>Memahami konsep potensi pasar dan peluang usaha dalam konteks kewirausahaan</li>
+                            <li class="flex items-start"><span class="text-blue-500 mr-2">✓</span>Mengembangkan kreativitas dalam mengidentifikasi peluang bisnis</li>
+                            <li class="flex items-start"><span class="text-blue-500 mr-2">✓</span>Menguasai metode analisis pasar untuk inovasi produk/jasa</li>
+                            <li class="flex items-start"><span class="text-blue-500 mr-2">✓</span>Mampu melakukan riset pasar untuk validasi ide kreatif</li>
+                            <li class="flex items-start"><span class="text-blue-500 mr-2">✓</span>Menumbuhkan jiwa entrepreneurship melalui analisis peluang</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-green-50 rounded-lg p-6 hover-lift animate-slide-in-right" style="animation-delay: 0.2s;">
+                        <h3 class="text-xl font-semibold text-green-800 mb-4">📚 Kompetensi yang Dikembangkan</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start"><span class="text-green-500 mr-2">🧠</span><strong>Kreativitas:</strong> Berpikir out-of-the-box dalam melihat peluang</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">💡</span><strong>Inovasi:</strong> Mengembangkan solusi baru untuk masalah pasar</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">🚀</span><strong>Kewirausahaan:</strong> Mindset bisnis dan keberanian mengambil risiko</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">📊</span><strong>Analitis:</strong> Kemampuan riset dan analisis data pasar</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">🎯</span><strong>Strategis:</strong> Perencanaan bisnis berbasis data</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-r from-purple-100 to-pink-100 rounded-lg p-6 mb-6 hover-lift animate-scale-in" style="animation-delay: 0.4s;">
+                    <h3 class="text-xl font-semibold text-purple-800 mb-4">🚀 Mengapa Penting untuk SMK?</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Sebagai siswa SMK, kalian dipersiapkan untuk langsung terjun ke dunia kerja atau berwirausaha. 
+                        Memahami analisis pasar akan membantu kalian mengidentifikasi peluang bisnis yang sesuai dengan 
+                        keahlian yang dipelajari di sekolah, sehingga bisa menciptakan lapangan kerja sendiri.
+                    </p>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-white bg-opacity-70 rounded-lg p-3 hover-lift animate-scale-in" style="animation-delay: 0.6s;">
+                            <div class="text-2xl mb-2 animate-bounce">🎨</div>
+                            <h4 class="font-semibold text-purple-800 mb-1">Kreativitas</h4>
+                            <p class="text-sm text-gray-700">Melatih kemampuan berpikir kreatif untuk menemukan solusi inovatif</p>
+                        </div>
+                        <div class="bg-white bg-opacity-70 rounded-lg p-3 hover-lift animate-scale-in" style="animation-delay: 0.8s;">
+                            <div class="text-2xl mb-2 animate-pulse">⚡</div>
+                            <h4 class="font-semibold text-purple-800 mb-1">Inovasi</h4>
+                            <p class="text-sm text-gray-700">Mengembangkan produk/jasa baru yang belum ada di pasar</p>
+                        </div>
+                        <div class="bg-white bg-opacity-70 rounded-lg p-3 hover-lift animate-scale-in" style="animation-delay: 1s;">
+                            <div class="text-2xl mb-2 animate-spin-slow">💼</div>
+                            <h4 class="font-semibold text-purple-800 mb-1">Kewirausahaan</h4>
+                            <p class="text-sm text-gray-700">Membangun mental entrepreneur dan kemandirian ekonomi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-r from-orange-100 to-yellow-100 rounded-lg p-6 hover-lift animate-fade-in-up" style="animation-delay: 1.2s;">
+                    <h3 class="text-xl font-semibold text-orange-800 mb-4">🌟 Manfaat Pembelajaran KIK</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-semibold text-orange-700 mb-3">📈 Manfaat Jangka Pendek:</h4>
+                            <ul class="space-y-2 text-gray-700 text-sm">
+                                <li class="flex items-start"><span class="text-orange-500 mr-2">•</span>Meningkatkan nilai mata pelajaran KIK</li>
+                                <li class="flex items-start"><span class="text-orange-500 mr-2">•</span>Mengembangkan soft skills seperti critical thinking</li>
+                                <li class="flex items-start"><span class="text-orange-500 mr-2">•</span>Memahami dunia bisnis dan ekonomi</li>
+                                <li class="flex items-start"><span class="text-orange-500 mr-2">•</span>Melatih kemampuan presentasi dan komunikasi</li>
+                                <li class="flex items-start"><span class="text-orange-500 mr-2">•</span>Menumbuhkan rasa percaya diri</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-orange-700 mb-3">🚀 Manfaat Jangka Panjang:</h4>
+                            <ul class="space-y-2 text-gray-700 text-sm">
+                                <li class="flex items-start"><span class="text-orange-500 mr-2">•</span>Siap menjadi entrepreneur muda yang sukses</li>
+                                <li class="flex items-start"><span class="text-orange-500 mr-2">•</span>Menciptakan lapangan kerja untuk orang lain</li>
+                                <li class="flex items-start"><span class="text-orange-500 mr-2">•</span>Memiliki kemandirian finansial</li>
+                                <li class="flex items-start"><span class="text-orange-500 mr-2">•</span>Berkontribusi pada perekonomian daerah</li>
+                                <li class="flex items-start"><span class="text-orange-500 mr-2">•</span>Menjadi role model bagi generasi selanjutnya</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-4 p-4 bg-white bg-opacity-70 rounded-lg">
+                        <p class="text-sm text-orange-800 font-medium">
+                            💡 <strong>Ingat:</strong> Setiap entrepreneur besar dimulai dari langkah kecil. Analisis pasar yang baik adalah fondasi kesuksesan bisnis!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Konsep Dasar Section -->
+        <section id="konsep" class="section hidden">
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">💡 Konsep Dasar</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div class="card-hover bg-blue-50 rounded-lg p-6">
+                        <div class="text-4xl mb-4">🎯</div>
+                        <h3 class="text-xl font-semibold text-blue-800 mb-4">Apa itu Potensi Pasar?</h3>
+                        <p class="text-gray-700 mb-4">
+                            Potensi pasar adalah kemungkinan atau peluang yang ada di pasar untuk menjual produk atau jasa tertentu.
+                        </p>
+                        <div class="bg-white rounded-lg p-4">
+                            <h4 class="font-semibold mb-2">Indikator Potensi Pasar:</h4>
+                            <ul class="text-sm space-y-1">
+                                <li>• Jumlah konsumen potensial</li>
+                                <li>• Daya beli masyarakat</li>
+                                <li>• Kebutuhan yang belum terpenuhi</li>
+                                <li>• Tren dan gaya hidup</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card-hover bg-green-50 rounded-lg p-6">
+                        <div class="text-4xl mb-4">🚀</div>
+                        <h3 class="text-xl font-semibold text-green-800 mb-4">Apa itu Peluang Usaha?</h3>
+                        <p class="text-gray-700 mb-4">
+                            Peluang usaha adalah kesempatan yang dapat dimanfaatkan untuk memulai atau mengembangkan bisnis.
+                        </p>
+                        <div class="bg-white rounded-lg p-4">
+                            <h4 class="font-semibold mb-2">Ciri-ciri Peluang Usaha:</h4>
+                            <ul class="text-sm space-y-1">
+                                <li>• Ada permintaan pasar</li>
+                                <li>• Persaingan tidak terlalu ketat</li>
+                                <li>• Sesuai dengan kemampuan</li>
+                                <li>• Menguntungkan secara finansial</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-yellow-50 rounded-lg p-6 mb-6">
+                    <h3 class="text-xl font-semibold text-yellow-800 mb-4">🔗 Hubungan Potensi Pasar dan Peluang Usaha</h3>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-white rounded-lg p-4 text-center">
+                            <div class="text-2xl mb-2">📊</div>
+                            <h4 class="font-semibold mb-2">Analisis Pasar</h4>
+                            <p class="text-sm text-gray-600">Mengidentifikasi kebutuhan dan keinginan konsumen</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-4 text-center">
+                            <div class="text-2xl mb-2">💡</div>
+                            <h4 class="font-semibold mb-2">Identifikasi Peluang</h4>
+                            <p class="text-sm text-gray-600">Menemukan celah atau gap di pasar</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-4 text-center">
+                            <div class="text-2xl mb-2">🎯</div>
+                            <h4 class="font-semibold mb-2">Eksekusi Bisnis</h4>
+                            <p class="text-sm text-gray-600">Mengembangkan produk/jasa sesuai peluang</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-purple-50 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-purple-800 mb-4">💼 Contoh Sederhana</h3>
+                    <div class="bg-white rounded-lg p-4">
+                        <p class="text-gray-700 mb-2"><strong>Situasi:</strong> Di sekitar sekolah SMK banyak siswa yang lapar saat istirahat</p>
+                        <p class="text-gray-700 mb-2"><strong>Potensi Pasar:</strong> 500+ siswa yang membutuhkan makanan ringan</p>
+                        <p class="text-gray-700 mb-2"><strong>Peluang Usaha:</strong> Membuka kantin atau jual makanan ringan</p>
+                        <p class="text-gray-700"><strong>Analisis:</strong> Permintaan tinggi, persaingan sedikit, modal relatif kecil</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Metode Analisis Section -->
+        <section id="analisis" class="section hidden">
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">🔍 Metode Analisis</h2>
+                
+                <!-- SWOT Analysis -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">📊 Analisis SWOT</h3>
+                    <p class="text-gray-600 mb-6">SWOT adalah metode analisis untuk mengevaluasi Strengths (Kekuatan), Weaknesses (Kelemahan), Opportunities (Peluang), dan Threats (Ancaman).</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-4">
+                            <div class="bg-green-50 border-l-4 border-green-500 p-4">
+                                <h4 class="font-semibold text-green-800 mb-2">💪 Strengths (Kekuatan)</h4>
+                                <ul class="text-sm text-gray-700 space-y-1">
+                                    <li>• Keahlian yang dimiliki</li>
+                                    <li>• Modal yang tersedia</li>
+                                    <li>• Jaringan/koneksi</li>
+                                    <li>• Lokasi strategis</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-blue-50 border-l-4 border-blue-500 p-4">
+                                <h4 class="font-semibold text-blue-800 mb-2">🎯 Opportunities (Peluang)</h4>
+                                <ul class="text-sm text-gray-700 space-y-1">
+                                    <li>• Tren pasar yang berkembang</li>
+                                    <li>• Kebutuhan yang belum terpenuhi</li>
+                                    <li>• Dukungan pemerintah</li>
+                                    <li>• Teknologi baru</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4">
+                                <h4 class="font-semibold text-yellow-800 mb-2">⚠️ Weaknesses (Kelemahan)</h4>
+                                <ul class="text-sm text-gray-700 space-y-1">
+                                    <li>• Keterbatasan modal</li>
+                                    <li>• Kurang pengalaman</li>
+                                    <li>• Skill yang masih kurang</li>
+                                    <li>• Jaringan terbatas</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-red-50 border-l-4 border-red-500 p-4">
+                                <h4 class="font-semibold text-red-800 mb-2">⚡ Threats (Ancaman)</h4>
+                                <ul class="text-sm text-gray-700 space-y-1">
+                                    <li>• Persaingan ketat</li>
+                                    <li>• Perubahan regulasi</li>
+                                    <li>• Krisis ekonomi</li>
+                                    <li>• Perubahan selera konsumen</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5W+1H Analysis -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">❓ Analisis 5W + 1H</h3>
+                    <p class="text-gray-600 mb-6">Metode analisis dengan mengajukan 6 pertanyaan dasar untuk memahami peluang usaha secara mendalam.</p>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="bg-purple-50 rounded-lg p-4">
+                            <h4 class="font-semibold text-purple-800 mb-2">🤔 What (Apa)</h4>
+                            <p class="text-sm text-gray-700">Apa produk/jasa yang akan ditawarkan? Apa kebutuhan yang akan dipenuhi?</p>
+                        </div>
+                        
+                        <div class="bg-blue-50 rounded-lg p-4">
+                            <h4 class="font-semibold text-blue-800 mb-2">👥 Who (Siapa)</h4>
+                            <p class="text-sm text-gray-700">Siapa target konsumen? Siapa pesaing? Siapa yang terlibat?</p>
+                        </div>
+                        
+                        <div class="bg-green-50 rounded-lg p-4">
+                            <h4 class="font-semibold text-green-800 mb-2">📍 Where (Dimana)</h4>
+                            <p class="text-sm text-gray-700">Dimana lokasi usaha? Dimana target pasar berada?</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 rounded-lg p-4">
+                            <h4 class="font-semibold text-yellow-800 mb-2">⏰ When (Kapan)</h4>
+                            <p class="text-sm text-gray-700">Kapan waktu yang tepat memulai? Kapan target pasar membutuhkan?</p>
+                        </div>
+                        
+                        <div class="bg-red-50 rounded-lg p-4">
+                            <h4 class="font-semibold text-red-800 mb-2">❓ Why (Mengapa)</h4>
+                            <p class="text-sm text-gray-700">Mengapa konsumen membutuhkan? Mengapa memilih produk kita?</p>
+                        </div>
+                        
+                        <div class="bg-indigo-50 rounded-lg p-4">
+                            <h4 class="font-semibold text-indigo-800 mb-2">⚙️ How (Bagaimana)</h4>
+                            <p class="text-sm text-gray-700">Bagaimana cara produksi? Bagaimana cara pemasaran?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive SWOT Tool -->
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">🛠️ Tool Analisis SWOT Interaktif</h3>
+                    <p class="text-gray-600 mb-4">Coba analisis SWOT untuk ide bisnis kamu!</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Ide Bisnis:</label>
+                            <input type="text" id="business-idea" placeholder="Contoh: Jual makanan online" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Target Pasar:</label>
+                            <input type="text" id="target-market" placeholder="Contoh: Mahasiswa dan pekerja muda" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                    </div>
+                    
+                    <button onclick="generateSWOT()" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-all duration-300 hover-lift animate-pulse-glow">
+                        ✨ Buat Analisis SWOT
+                    </button>
+                    
+                    <div id="swot-result" class="mt-4 hidden">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="bg-white rounded-lg p-4">
+                                <h4 class="font-semibold text-green-600 mb-2">Strengths</h4>
+                                <div id="strengths-list"></div>
+                            </div>
+                            <div class="bg-white rounded-lg p-4">
+                                <h4 class="font-semibold text-red-600 mb-2">Weaknesses</h4>
+                                <div id="weaknesses-list"></div>
+                            </div>
+                            <div class="bg-white rounded-lg p-4">
+                                <h4 class="font-semibold text-blue-600 mb-2">Opportunities</h4>
+                                <div id="opportunities-list"></div>
+                            </div>
+                            <div class="bg-white rounded-lg p-4">
+                                <h4 class="font-semibold text-yellow-600 mb-2">Threats</h4>
+                                <div id="threats-list"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Riset Pasar Section -->
+        <section id="riset" class="section hidden">
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">📈 Riset Pasar</h2>
+                
+                <div class="mb-8">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">🎯 Apa itu Riset Pasar?</h3>
+                    <p class="text-gray-600 mb-6">
+                        Riset pasar adalah proses mengumpulkan, menganalisis, dan menginterpretasi informasi tentang pasar, 
+                        konsumen, pesaing, dan industri untuk membantu pengambilan keputusan bisnis.
+                    </p>
+                </div>
+
+                <!-- Jenis Riset -->
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-blue-50 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold text-blue-800 mb-4">📊 Riset Primer</h3>
+                        <p class="text-gray-700 mb-4">Data yang dikumpulkan langsung dari sumber pertama</p>
+                        
+                        <div class="space-y-3">
+                            <div class="bg-white rounded-lg p-3">
+                                <h4 class="font-semibold mb-1">📋 Survey/Kuesioner</h4>
+                                <p class="text-sm text-gray-600">Mengumpulkan data melalui pertanyaan terstruktur</p>
+                            </div>
+                            <div class="bg-white rounded-lg p-3">
+                                <h4 class="font-semibold mb-1">🗣️ Wawancara</h4>
+                                <p class="text-sm text-gray-600">Tanya jawab langsung dengan responden</p>
+                            </div>
+                            <div class="bg-white rounded-lg p-3">
+                                <h4 class="font-semibold mb-1">👀 Observasi</h4>
+                                <p class="text-sm text-gray-600">Mengamati perilaku konsumen secara langsung</p>
+                            </div>
+                            <div class="bg-white rounded-lg p-3">
+                                <h4 class="font-semibold mb-1">👥 Focus Group Discussion</h4>
+                                <p class="text-sm text-gray-600">Diskusi kelompok terarah dengan target konsumen</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-green-50 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold text-green-800 mb-4">📚 Riset Sekunder</h3>
+                        <p class="text-gray-700 mb-4">Data yang sudah ada dan dikumpulkan oleh pihak lain</p>
+                        
+                        <div class="space-y-3">
+                            <div class="bg-white rounded-lg p-3">
+                                <h4 class="font-semibold mb-1">📰 Publikasi Pemerintah</h4>
+                                <p class="text-sm text-gray-600">Data BPS, Kementerian, dll</p>
+                            </div>
+                            <div class="bg-white rounded-lg p-3">
+                                <h4 class="font-semibold mb-1">🌐 Internet & Media</h4>
+                                <p class="text-sm text-gray-600">Website, artikel, berita online</p>
+                            </div>
+                            <div class="bg-white rounded-lg p-3">
+                                <h4 class="font-semibold mb-1">📊 Laporan Industri</h4>
+                                <p class="text-sm text-gray-600">Riset dari lembaga konsultan</p>
+                            </div>
+                            <div class="bg-white rounded-lg p-3">
+                                <h4 class="font-semibold mb-1">📖 Jurnal & Buku</h4>
+                                <p class="text-sm text-gray-600">Penelitian akademis dan literatur</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Langkah Riset -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">📝 Langkah-langkah Riset Pasar</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4 bg-gray-50 rounded-lg p-4">
+                            <div class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">1</div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Tentukan Tujuan Riset</h4>
+                                <p class="text-gray-600 text-sm">Apa yang ingin kamu ketahui? Contoh: "Apakah ada permintaan untuk jasa cuci motor di sekitar sekolah?"</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4 bg-gray-50 rounded-lg p-4">
+                            <div class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">2</div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Tentukan Target Responden</h4>
+                                <p class="text-gray-600 text-sm">Siapa yang akan kamu tanya? Contoh: Siswa SMK yang punya motor</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4 bg-gray-50 rounded-lg p-4">
+                            <div class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">3</div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Pilih Metode Riset</h4>
+                                <p class="text-gray-600 text-sm">Survey online, wawancara langsung, atau observasi?</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4 bg-gray-50 rounded-lg p-4">
+                            <div class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">4</div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Buat Instrumen Riset</h4>
+                                <p class="text-gray-600 text-sm">Siapkan daftar pertanyaan yang jelas dan mudah dipahami</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4 bg-gray-50 rounded-lg p-4">
+                            <div class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">5</div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Kumpulkan Data</h4>
+                                <p class="text-gray-600 text-sm">Lakukan survey, wawancara, atau observasi sesuai rencana</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4 bg-gray-50 rounded-lg p-4">
+                            <div class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">6</div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Analisis Data</h4>
+                                <p class="text-gray-600 text-sm">Olah data dan cari pola atau tren yang muncul</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4 bg-gray-50 rounded-lg p-4">
+                            <div class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">7</div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Buat Kesimpulan</h4>
+                                <p class="text-gray-600 text-sm">Tarik kesimpulan dan buat rekomendasi untuk bisnis</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template Survey -->
+                <div class="bg-purple-50 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-purple-800 mb-4">📋 Template Survey Sederhana</h3>
+                    <p class="text-gray-600 mb-4">Contoh pertanyaan untuk riset pasar jasa cuci motor:</p>
+                    
+                    <div class="bg-white rounded-lg p-4 space-y-3">
+                        <div class="border-b pb-2">
+                            <p class="font-medium">1. Apakah Anda memiliki sepeda motor?</p>
+                            <p class="text-sm text-gray-600">□ Ya □ Tidak</p>
+                        </div>
+                        <div class="border-b pb-2">
+                            <p class="font-medium">2. Seberapa sering Anda mencuci motor?</p>
+                            <p class="text-sm text-gray-600">□ Setiap hari □ Seminggu sekali □ Sebulan sekali □ Jarang</p>
+                        </div>
+                        <div class="border-b pb-2">
+                            <p class="font-medium">3. Dimana biasanya Anda mencuci motor?</p>
+                            <p class="text-sm text-gray-600">□ Di rumah □ Tempat cuci motor □ Tidak pernah dicuci</p>
+                        </div>
+                        <div class="border-b pb-2">
+                            <p class="font-medium">4. Berapa yang bersedia Anda bayar untuk sekali cuci motor?</p>
+                            <p class="text-sm text-gray-600">□ < Rp 5.000 □ Rp 5.000-10.000 □ Rp 10.000-15.000 □ > Rp 15.000</p>
+                        </div>
+                        <div>
+                            <p class="font-medium">5. Apakah Anda tertarik dengan jasa cuci motor di sekitar sekolah?</p>
+                            <p class="text-sm text-gray-600">□ Sangat tertarik □ Tertarik □ Biasa saja □ Tidak tertarik</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Studi Kasus Section -->
+        <section id="studi-kasus" class="section hidden">
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">📚 Studi Kasus</h2>
+                
+                <!-- Kasus 1 -->
+                <div class="mb-8">
+                    <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-6 mb-4">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-2">🍕 Kasus 1: Bisnis Makanan Online "Dapur Siswa"</h3>
+                        <p class="text-gray-600">Seorang siswa SMK Tata Boga melihat peluang bisnis makanan online untuk teman-temannya</p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-4">
+                            <div class="bg-blue-50 rounded-lg p-4">
+                                <h4 class="font-semibold text-blue-800 mb-2">📊 Analisis Situasi</h4>
+                                <ul class="text-sm space-y-1">
+                                    <li>• Banyak siswa yang tidak sempat sarapan</li>
+                                    <li>• Kantin sekolah sering kehabisan makanan</li>
+                                    <li>• Siswa suka pesan makanan online</li>
+                                    <li>• Punya skill memasak dari jurusan Tata Boga</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-green-50 rounded-lg p-4">
+                                <h4 class="font-semibold text-green-800 mb-2">🎯 Strategi yang Dilakukan</h4>
+                                <ul class="text-sm space-y-1">
+                                    <li>• Survey ke 100 siswa tentang kebiasaan makan</li>
+                                    <li>• Buat menu sesuai selera dan budget siswa</li>
+                                    <li>• Mulai dengan 3 menu andalan</li>
+                                    <li>• Promosi melalui media sosial</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="bg-yellow-50 rounded-lg p-4">
+                                <h4 class="font-semibold text-yellow-800 mb-2">📈 Hasil Riset</h4>
+                                <ul class="text-sm space-y-1">
+                                    <li>• 80% siswa sering telat sarapan</li>
+                                    <li>• Budget makan Rp 10.000-15.000</li>
+                                    <li>• Suka makanan praktis dan mengenyangkan</li>
+                                    <li>• Lebih suka pesan via WhatsApp</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-purple-50 rounded-lg p-4">
+                                <h4 class="font-semibold text-purple-800 mb-2">🏆 Hasil Bisnis</h4>
+                                <ul class="text-sm space-y-1">
+                                    <li>• Omzet Rp 500.000/minggu di bulan pertama</li>
+                                    <li>• 30 pelanggan tetap</li>
+                                    <li>• Berkembang jadi katering sekolah</li>
+                                    <li>• Merekrut 2 teman sebagai partner</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kasus 2 -->
+                <div class="mb-8">
+                    <div class="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-6 mb-4">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-2">🔧 Kasus 2: Jasa Service Elektronik "TeknoFix"</h3>
+                        <p class="text-gray-600">Siswa SMK Teknik Elektronika membuka jasa service HP dan laptop</p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-4">
+                            <div class="bg-red-50 rounded-lg p-4">
+                                <h4 class="font-semibold text-red-800 mb-2">⚠️ Tantangan Awal</h4>
+                                <ul class="text-sm space-y-1">
+                                    <li>• Banyak toko service di sekitar</li>
+                                    <li>• Kurang pengalaman bisnis</li>
+                                    <li>• Modal terbatas untuk alat</li>
+                                    <li>• Belum punya pelanggan</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-blue-50 rounded-lg p-4">
+                                <h4 class="font-semibold text-blue-800 mb-2">💡 Inovasi yang Dilakukan</h4>
+                                <ul class="text-sm space-y-1">
+                                    <li>• Jasa antar-jemput gratis</li>
+                                    <li>• Harga lebih murah 20%</li>
+                                    <li>• Garansi service 1 bulan</li>
+                                    <li>• Konsultasi gratis via WhatsApp</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="bg-green-50 rounded-lg p-4">
+                                <h4 class="font-semibold text-green-800 mb-2">📊 Analisis Pasar</h4>
+                                <ul class="text-sm space-y-1">
+                                    <li>• Target: Siswa dan mahasiswa</li>
+                                    <li>• Kebutuhan: Service murah dan cepat</li>
+                                    <li>• Kompetitor: Toko service konvensional</li>
+                                    <li>• Keunggulan: Harga dan kemudahan</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-purple-50 rounded-lg p-4">
+                                <h4 class="font-semibold text-purple-800 mb-2">🎯 Perkembangan</h4>
+                                <ul class="text-sm space-y-1">
+                                    <li>• 50+ HP berhasil diperbaiki</li>
+                                    <li>• Rating 4.8/5 di Google Review</li>
+                                    <li>• Ekspansi ke service laptop</li>
+                                    <li>• Kerjasama dengan 3 sekolah</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lessons Learned -->
+                <div class="bg-gradient-to-r from-orange-50 to-red-50 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-orange-800 mb-4">🎓 Pelajaran dari Studi Kasus</h3>
+                    
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-white rounded-lg p-4">
+                            <div class="text-2xl mb-2">🔍</div>
+                            <h4 class="font-semibold mb-2">Riset itu Penting</h4>
+                            <p class="text-sm text-gray-600">Kedua kasus melakukan riset untuk memahami kebutuhan target pasar</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-4">
+                            <div class="text-2xl mb-2">💡</div>
+                            <h4 class="font-semibold mb-2">Inovasi Sederhana</h4>
+                            <p class="text-sm text-gray-600">Tidak perlu inovasi besar, cukup perbaiki yang sudah ada</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-4">
+                            <div class="text-2xl mb-2">🎯</div>
+                            <h4 class="font-semibold mb-2">Fokus pada Target</h4>
+                            <p class="text-sm text-gray-600">Pahami betul siapa target konsumen dan apa kebutuhan mereka</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Praktik Section -->
+        <section id="praktik" class="section hidden">
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">✏️ Latihan Praktik</h2>
+                
+                <div class="mb-8">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">🎯 Tugas: Analisis Peluang Usaha di Sekitar Sekolah</h3>
+                    <p class="text-gray-600 mb-6">Ikuti langkah-langkah berikut untuk menganalisis peluang usaha di sekitar sekolahmu!</p>
+                </div>
+
+                <!-- Step 1 -->
+                <div class="mb-6">
+                    <div class="bg-blue-50 rounded-lg p-6">
+                        <h4 class="text-xl font-semibold text-blue-800 mb-4">📝 Langkah 1: Identifikasi Masalah/Kebutuhan</h4>
+                        <p class="text-gray-700 mb-4">Amati lingkungan sekitar sekolah dan identifikasi masalah atau kebutuhan yang belum terpenuhi.</p>
+                        
+                        <div class="bg-white rounded-lg p-4 mb-4">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Tuliskan 3 masalah/kebutuhan yang kamu temukan:</label>
+                            <textarea id="problems" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Contoh:
+1. Siswa sering kehabisan pulsa dan tidak ada konter terdekat
+2. Banyak siswa yang lupa bawa alat tulis
+3. Tidak ada tempat fotokopi yang dekat dengan sekolah"></textarea>
+                        </div>
+                        
+                        <div class="bg-yellow-100 rounded-lg p-3">
+                            <p class="text-sm text-yellow-800"><strong>💡 Tips:</strong> Perhatikan keluhan teman-teman, apa yang sering mereka cari tapi sulit didapat, atau layanan apa yang masih kurang di sekitar sekolah.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="mb-6">
+                    <div class="bg-green-50 rounded-lg p-6">
+                        <h4 class="text-xl font-semibold text-green-800 mb-4">🎯 Langkah 2: Pilih Satu Peluang Terbaik</h4>
+                        <p class="text-gray-700 mb-4">Dari 3 masalah di atas, pilih 1 yang paling berpotensi untuk dijadikan bisnis.</p>
+                        
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="bg-white rounded-lg p-4">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Peluang yang dipilih:</label>
+                                <input type="text" id="chosen-opportunity" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Contoh: Jual pulsa dan aksesoris HP">
+                            </div>
+                            <div class="bg-white rounded-lg p-4">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Alasan memilih:</label>
+                                <input type="text" id="reason" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Contoh: Modal kecil, permintaan tinggi">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="mb-6">
+                    <div class="bg-purple-50 rounded-lg p-6">
+                        <h4 class="text-xl font-semibold text-purple-800 mb-4">🔍 Langkah 3: Analisis 5W+1H</h4>
+                        <p class="text-gray-700 mb-4">Analisis peluang usaha yang kamu pilih menggunakan metode 5W+1H.</p>
+                        
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="space-y-4">
+                                <div class="bg-white rounded-lg p-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">What (Apa produk/jasanya?):</label>
+                                    <input type="text" id="what" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                </div>
+                                <div class="bg-white rounded-lg p-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Who (Siapa target konsumen?):</label>
+                                    <input type="text" id="who" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                </div>
+                                <div class="bg-white rounded-lg p-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Where (Dimana lokasi usaha?):</label>
+                                    <input type="text" id="where" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                </div>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="bg-white rounded-lg p-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">When (Kapan waktu yang tepat?):</label>
+                                    <input type="text" id="when" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                </div>
+                                <div class="bg-white rounded-lg p-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Why (Mengapa konsumen butuh?):</label>
+                                    <input type="text" id="why" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                </div>
+                                <div class="bg-white rounded-lg p-4">
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">How (Bagaimana cara menjalankan?):</label>
+                                    <input type="text" id="how" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="mb-6">
+                    <div class="bg-orange-50 rounded-lg p-6">
+                        <h4 class="text-xl font-semibold text-orange-800 mb-4">📊 Langkah 4: Estimasi Potensi Pasar</h4>
+                        <p class="text-gray-700 mb-4">Hitung perkiraan potensi pasar untuk bisnis kamu.</p>
+                        
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <div class="bg-white rounded-lg p-4">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Jumlah target konsumen:</label>
+                                <input type="number" id="target-customers" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="500">
+                                <p class="text-xs text-gray-500 mt-1">Contoh: 500 siswa</p>
+                            </div>
+                            <div class="bg-white rounded-lg p-4">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Harga per unit (Rp):</label>
+                                <input type="number" id="price-per-unit" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="5000">
+                                <p class="text-xs text-gray-500 mt-1">Contoh: Rp 5.000</p>
+                            </div>
+                            <div class="bg-white rounded-lg p-4">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Frekuensi beli/bulan:</label>
+                                <input type="number" id="frequency" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="2">
+                                <p class="text-xs text-gray-500 mt-1">Contoh: 2 kali/bulan</p>
+                            </div>
+                        </div>
+                        
+                        <button onclick="calculateMarketPotential()" class="mt-4 bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-all duration-300 hover-lift animate-pulse-glow">
+                            📊 Hitung Potensi Pasar
+                        </button>
+                        
+                        <div id="market-potential-result" class="mt-4 hidden bg-white rounded-lg p-4">
+                            <h5 class="font-semibold text-gray-800 mb-2">Hasil Perhitungan:</h5>
+                            <div id="calculation-details"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Generate Report -->
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h4 class="text-xl font-semibold text-gray-800 mb-4">📋 Buat Laporan Analisis</h4>
+                    <p class="text-gray-600 mb-4">Klik tombol di bawah untuk membuat laporan lengkap analisis peluang usaha kamu!</p>
+                    
+                    <button onclick="generateReport()" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all duration-300 font-medium hover-lift animate-pulse-glow">
+                        📄 Buat Laporan Analisis
+                    </button>
+                    
+                    <div id="analysis-report" class="mt-6 hidden bg-white rounded-lg p-6 border">
+                        <h5 class="text-lg font-semibold text-gray-800 mb-4">📊 Laporan Analisis Peluang Usaha</h5>
+                        <div id="report-content"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz" class="section hidden">
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">🎯 Kuis Pemahaman</h2>
+                
+                <div class="mb-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Soal <span id="current-question">1</span> dari <span id="total-questions">10</span></h3>
+                        <div class="bg-blue-100 px-4 py-2 rounded-lg">
+                            <span class="text-blue-800 font-medium">Skor: <span id="quiz-score">0</span></span>
+                        </div>
+                    </div>
+                    
+                    <div class="w-full bg-gray-200 rounded-full h-2 mb-6">
+                        <div id="quiz-progress" class="bg-blue-600 h-2 rounded-full transition-all duration-300" style="width: 10%"></div>
+                    </div>
+                </div>
+
+                <div id="quiz-container">
+                    <div class="bg-gray-50 rounded-lg p-6 mb-6">
+                        <h4 class="text-lg font-medium text-gray-800 mb-4" id="question-text">Loading...</h4>
+                        <div id="options-container" class="space-y-3">
+                            <!-- Options will be loaded here -->
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-between">
+                        <button id="prev-btn" onclick="previousQuestion()" class="bg-gray-500 text-white px-6 py-2 rounded-lg hover:bg-gray-600 transition-colors disabled:opacity-50" disabled>
+                            ← Sebelumnya
+                        </button>
+                        <button id="next-btn" onclick="nextQuestion()" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                            Selanjutnya →
+                        </button>
+                    </div>
+                </div>
+
+                <div id="quiz-result" class="hidden">
+                    <div class="text-center py-8">
+                        <div class="text-6xl mb-4" id="result-emoji">🎉</div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2" id="result-title">Selamat!</h3>
+                        <p class="text-gray-600 mb-6" id="result-message">Kamu telah menyelesaikan kuis dengan baik!</p>
+                        
+                        <div class="bg-blue-50 rounded-lg p-6 mb-6 max-w-md mx-auto">
+                            <h4 class="font-semibold text-blue-800 mb-2">Hasil Kuis:</h4>
+                            <div class="text-3xl font-bold text-blue-600 mb-2" id="final-score">0/10</div>
+                            <div class="text-sm text-blue-600" id="score-percentage">0%</div>
+                        </div>
+                        
+                        <button onclick="restartQuiz()" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                            🔄 Ulangi Kuis
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12 relative overflow-hidden">
+        <!-- Animated background -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="floating-shape absolute top-5 left-10 w-8 h-8 bg-white bg-opacity-5 rounded-full"></div>
+            <div class="floating-shape absolute top-10 right-20 w-6 h-6 bg-white bg-opacity-5 rounded-full" style="animation-delay: -3s;"></div>
+            <div class="floating-shape absolute bottom-5 left-1/3 w-10 h-10 bg-white bg-opacity-5 rounded-full" style="animation-delay: -1s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="animate-fade-in-up">
+                <h3 class="text-xl font-semibold mb-2">📚 Analisis Potensi Pasar dan Peluang Usaha</h3>
+                <div class="inline-flex items-center bg-gray-700 bg-opacity-50 rounded-full px-4 py-2 mb-4">
+                    <span class="text-yellow-400 mr-2">👨‍🏫</span>
+                    <span class="text-sm">Pengajar: <strong>Lukman, S.Pd, M.Si</strong></span>
+                </div>
+                <p class="text-sm text-gray-400">Semoga materi ini bermanfaat untuk persiapan wirausaha kalian! 🚀</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Global variables
+        let currentSection = 'overview';
+        let currentQuizQuestion = 0;
+        let quizScore = 0;
+        let userAnswers = [];
+        
+        // Quiz questions
+        const quizQuestions = [
+            {
+                question: "Apa yang dimaksud dengan potensi pasar?",
+                options: [
+                    "Jumlah uang yang dimiliki konsumen",
+                    "Kemungkinan atau peluang yang ada di pasar untuk menjual produk/jasa",
+                    "Lokasi tempat berjualan",
+                    "Cara mempromosikan produk"
+                ],
+                correct: 1
+            },
+            {
+                question: "Manakah yang BUKAN termasuk indikator potensi pasar?",
+                options: [
+                    "Jumlah konsumen potensial",
+                    "Daya beli masyarakat",
+                    "Warna kemasan produk",
+                    "Kebutuhan yang belum terpenuhi"
+                ],
+                correct: 2
+            },
+            {
+                question: "Dalam analisis SWOT, apa kepanjangan dari huruf 'T'?",
+                options: [
+                    "Target",
+                    "Threats (Ancaman)",
+                    "Time (Waktu)",
+                    "Technology (Teknologi)"
+                ],
+                correct: 1
+            },
+            {
+                question: "Riset primer adalah:",
+                options: [
+                    "Data yang sudah ada dari pihak lain",
+                    "Data yang dikumpulkan langsung dari sumber pertama",
+                    "Data dari internet",
+                    "Data dari buku"
+                ],
+                correct: 1
+            },
+            {
+                question: "Manakah contoh riset sekunder?",
+                options: [
+                    "Wawancara langsung dengan konsumen",
+                    "Survey online",
+                    "Data dari BPS (Badan Pusat Statistik)",
+                    "Focus Group Discussion"
+                ],
+                correct: 2
+            },
+            {
+                question: "Dalam metode 5W+1H, 'How' berarti:",
+                options: [
+                    "Kapan waktu yang tepat",
+                    "Dimana lokasi usaha",
+                    "Bagaimana cara menjalankan",
+                    "Mengapa konsumen membutuhkan"
+                ],
+                correct: 2
+            },
+            {
+                question: "Ciri-ciri peluang usaha yang baik adalah:",
+                options: [
+                    "Persaingan sangat ketat",
+                    "Tidak ada permintaan pasar",
+                    "Ada permintaan pasar dan persaingan tidak terlalu ketat",
+                    "Modal yang sangat besar"
+                ],
+                correct: 2
+            },
+            {
+                question: "Langkah pertama dalam riset pasar adalah:",
+                options: [
+                    "Mengumpulkan data",
+                    "Menentukan tujuan riset",
+                    "Menganalisis data",
+                    "Membuat kesimpulan"
+                ],
+                correct: 1
+            },
+            {
+                question: "Manakah yang termasuk kekuatan (Strengths) dalam analisis SWOT untuk siswa SMK?",
+                options: [
+                    "Keterbatasan modal",
+                    "Kurang pengalaman",
+                    "Keahlian yang dimiliki dari jurusan",
+                    "Persaingan ketat"
+                ],
+                correct: 2
+            },
+            {
+                question: "Tujuan utama melakukan analisis potensi pasar adalah:",
+                options: [
+                    "Menentukan harga produk",
+                    "Mengidentifikasi peluang bisnis yang menguntungkan",
+                    "Membuat kemasan produk",
+                    "Mencari lokasi toko"
+                ],
+                correct: 1
+            }
+        ];
+
+        // Navigation functions
+        function showSection(sectionName) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.add('hidden');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionName).classList.remove('hidden');
+            
+            // Update navigation
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('bg-blue-100', 'text-blue-600');
+                btn.classList.add('text-gray-600');
+            });
+            
+            event.target.classList.add('bg-blue-100', 'text-blue-600');
+            event.target.classList.remove('text-gray-600');
+            
+            currentSection = sectionName;
+            updateProgress();
+            
+            // Initialize quiz if quiz section is selected
+            if (sectionName === 'quiz') {
+                initializeQuiz();
+            }
+        }
+
+        // Progress tracking
+        function updateProgress() {
+            const sections = ['overview', 'konsep', 'analisis', 'riset', 'studi-kasus', 'praktik', 'quiz'];
+            const currentIndex = sections.indexOf(currentSection);
+            const progress = ((currentIndex + 1) / sections.length) * 100;
+            
+            document.getElementById('progress-bar').style.width = progress + '%';
+            document.getElementById('progress-text').textContent = Math.round(progress) + '%';
+        }
+
+        // SWOT Generator
+        function generateSWOT() {
+            const businessIdea = document.getElementById('business-idea').value;
+            const targetMarket = document.getElementById('target-market').value;
+            
+            if (!businessIdea || !targetMarket) {
+                alert('Mohon isi ide bisnis dan target pasar terlebih dahulu!');
+                return;
+            }
+            
+            // Sample SWOT analysis based on input
+            const swotData = {
+                strengths: [
+                    "Memahami kebutuhan target pasar",
+                    "Energi dan semangat tinggi sebagai siswa",
+                    "Biaya operasional rendah",
+                    "Fleksibilitas dalam beradaptasi"
+                ],
+                weaknesses: [
+                    "Keterbatasan modal awal",
+                    "Pengalaman bisnis masih kurang",
+                    "Jaringan bisnis terbatas",
+                    "Waktu terbagi dengan sekolah"
+                ],
+                opportunities: [
+                    "Pasar " + targetMarket + " yang besar",
+                    "Tren digitalisasi yang mendukung",
+                    "Dukungan program wirausaha muda",
+                    "Kebutuhan akan " + businessIdea + " yang meningkat"
+                ],
+                threats: [
+                    "Persaingan dengan bisnis sejenis",
+                    "Perubahan selera konsumen",
+                    "Ketidakstabilan ekonomi",
+                    "Regulasi yang berubah"
+                ]
+            };
+            
+            // Display results
+            document.getElementById('strengths-list').innerHTML = swotData.strengths.map(item => `<p class="text-sm mb-1">• ${item}</p>`).join('');
+            document.getElementById('weaknesses-list').innerHTML = swotData.weaknesses.map(item => `<p class="text-sm mb-1">• ${item}</p>`).join('');
+            document.getElementById('opportunities-list').innerHTML = swotData.opportunities.map(item => `<p class="text-sm mb-1">• ${item}</p>`).join('');
+            document.getElementById('threats-list').innerHTML = swotData.threats.map(item => `<p class="text-sm mb-1">• ${item}</p>`).join('');
+            
+            document.getElementById('swot-result').classList.remove('hidden');
+        }
+
+        // Market Potential Calculator
+        function calculateMarketPotential() {
+            const targetCustomers = parseInt(document.getElementById('target-customers').value) || 0;
+            const pricePerUnit = parseInt(document.getElementById('price-per-unit').value) || 0;
+            const frequency = parseInt(document.getElementById('frequency').value) || 0;
+            
+            if (targetCustomers === 0 || pricePerUnit === 0 || frequency === 0) {
+                alert('Mohon isi semua field dengan angka yang valid!');
+                return;
+            }
+            
+            // Assume 10% market penetration for realistic calculation
+            const marketPenetration = 0.1;
+            const actualCustomers = Math.round(targetCustomers * marketPenetration);
+            const monthlyRevenue = actualCustomers * pricePerUnit * frequency;
+            const yearlyRevenue = monthlyRevenue * 12;
+            
+            const resultHTML = `
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <p class="text-sm text-gray-600">Target Konsumen: <strong>${targetCustomers.toLocaleString()} orang</strong></p>
+                        <p class="text-sm text-gray-600">Estimasi Konsumen Aktual (10%): <strong>${actualCustomers.toLocaleString()} orang</strong></p>
+                        <p class="text-sm text-gray-600">Harga per Unit: <strong>Rp ${pricePerUnit.toLocaleString()}</strong></p>
+                        <p class="text-sm text-gray-600">Frekuensi Beli: <strong>${frequency}x/bulan</strong></p>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-600">Potensi Pendapatan/Bulan: <strong class="text-green-600">Rp ${monthlyRevenue.toLocaleString()}</strong></p>
+                        <p class="text-sm text-gray-600">Potensi Pendapatan/Tahun: <strong class="text-green-600">Rp ${yearlyRevenue.toLocaleString()}</strong></p>
+                    </div>
+                </div>
+                <div class="mt-4 p-3 bg-blue-50 rounded-lg">
+                    <p class="text-sm text-blue-800"><strong>Catatan:</strong> Perhitungan ini menggunakan asumsi penetrasi pasar 10% untuk memberikan estimasi yang realistis.</p>
+                </div>
+            `;
+            
+            document.getElementById('calculation-details').innerHTML = resultHTML;
+            document.getElementById('market-potential-result').classList.remove('hidden');
+        }
+
+        // Report Generator
+        function generateReport() {
+            const problems = document.getElementById('problems').value;
+            const chosenOpportunity = document.getElementById('chosen-opportunity').value;
+            const reason = document.getElementById('reason').value;
+            const what = document.getElementById('what').value;
+            const who = document.getElementById('who').value;
+            const where = document.getElementById('where').value;
+            const when = document.getElementById('when').value;
+            const why = document.getElementById('why').value;
+            const how = document.getElementById('how').value;
+            
+            if (!problems || !chosenOpportunity) {
+                alert('Mohon isi minimal masalah yang ditemukan dan peluang yang dipilih!');
+                return;
+            }
+            
+            const reportHTML = `
+                <div class="space-y-4">
+                    <div>
+                        <h6 class="font-semibold text-gray-800 mb-2">1. Identifikasi Masalah/Kebutuhan</h6>
+                        <div class="bg-gray-50 rounded-lg p-3">
+                            <p class="text-sm text-gray-700">${problems || 'Belum diisi'}</p>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h6 class="font-semibold text-gray-800 mb-2">2. Peluang Usaha Terpilih</h6>
+                        <div class="bg-gray-50 rounded-lg p-3">
+                            <p class="text-sm text-gray-700"><strong>Peluang:</strong> ${chosenOpportunity}</p>
+                            <p class="text-sm text-gray-700"><strong>Alasan:</strong> ${reason || 'Belum diisi'}</p>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h6 class="font-semibold text-gray-800 mb-2">3. Analisis 5W+1H</h6>
+                        <div class="bg-gray-50 rounded-lg p-3">
+                            <div class="grid md:grid-cols-2 gap-3 text-sm">
+                                <p><strong>What:</strong> ${what || 'Belum diisi'}</p>
+                                <p><strong>Who:</strong> ${who || 'Belum diisi'}</p>
+                                <p><strong>Where:</strong> ${where || 'Belum diisi'}</p>
+                                <p><strong>When:</strong> ${when || 'Belum diisi'}</p>
+                                <p><strong>Why:</strong> ${why || 'Belum diisi'}</p>
+                                <p><strong>How:</strong> ${how || 'Belum diisi'}</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h6 class="font-semibold text-gray-800 mb-2">4. Kesimpulan</h6>
+                        <div class="bg-blue-50 rounded-lg p-3">
+                            <p class="text-sm text-blue-800">
+                                Berdasarkan analisis di atas, peluang usaha <strong>${chosenOpportunity}</strong> 
+                                memiliki potensi yang baik untuk dikembangkan. Langkah selanjutnya adalah melakukan 
+                                riset pasar lebih mendalam dan menyiapkan rencana bisnis yang detail.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('report-content').innerHTML = reportHTML;
+            document.getElementById('analysis-report').classList.remove('hidden');
+        }
+
+        // Quiz functions
+        function initializeQuiz() {
+            currentQuizQuestion = 0;
+            quizScore = 0;
+            userAnswers = [];
+            document.getElementById('quiz-container').classList.remove('hidden');
+            document.getElementById('quiz-result').classList.add('hidden');
+            loadQuestion();
+        }
+
+        function loadQuestion() {
+            const question = quizQuestions[currentQuizQuestion];
+            document.getElementById('current-question').textContent = currentQuizQuestion + 1;
+            document.getElementById('total-questions').textContent = quizQuestions.length;
+            document.getElementById('question-text').textContent = question.question;
+            
+            const optionsContainer = document.getElementById('options-container');
+            optionsContainer.innerHTML = '';
+            
+            question.options.forEach((option, index) => {
+                const optionDiv = document.createElement('div');
+                optionDiv.className = 'quiz-option p-4 border border-gray-300 rounded-lg cursor-pointer';
+                optionDiv.innerHTML = `
+                    <label class="flex items-center cursor-pointer">
+                        <input type="radio" name="quiz-option" value="${index}" class="mr-3">
+                        <span>${option}</span>
+                    </label>
+                `;
+                optionDiv.onclick = () => selectOption(index, optionDiv);
+                optionsContainer.appendChild(optionDiv);
+            });
+            
+            // Update progress
+            const progress = ((currentQuizQuestion + 1) / quizQuestions.length) * 100;
+            document.getElementById('quiz-progress').style.width = progress + '%';
+            
+            // Update buttons
+            document.getElementById('prev-btn').disabled = currentQuizQuestion === 0;
+            document.getElementById('next-btn').textContent = currentQuizQuestion === quizQuestions.length - 1 ? 'Selesai' : 'Selanjutnya →';
+        }
+
+        function selectOption(index, optionDiv) {
+            // Remove previous selection
+            document.querySelectorAll('.quiz-option').forEach(opt => {
+                opt.classList.remove('bg-blue-100', 'border-blue-500');
+            });
+            
+            // Add selection to clicked option
+            optionDiv.classList.add('bg-blue-100', 'border-blue-500');
+            
+            // Update radio button
+            const radio = optionDiv.querySelector('input[type="radio"]');
+            radio.checked = true;
+            
+            userAnswers[currentQuizQuestion] = index;
+        }
+
+        function nextQuestion() {
+            if (userAnswers[currentQuizQuestion] === undefined) {
+                alert('Mohon pilih jawaban terlebih dahulu!');
+                return;
+            }
+            
+            // Check answer
+            if (userAnswers[currentQuizQuestion] === quizQuestions[currentQuizQuestion].correct) {
+                quizScore++;
+            }
+            
+            document.getElementById('quiz-score').textContent = quizScore;
+            
+            if (currentQuizQuestion < quizQuestions.length - 1) {
+                currentQuizQuestion++;
+                loadQuestion();
+            } else {
+                showQuizResult();
+            }
+        }
+
+        function previousQuestion() {
+            if (currentQuizQuestion > 0) {
+                currentQuizQuestion--;
+                loadQuestion();
+                
+                // Restore previous answer if exists
+                if (userAnswers[currentQuizQuestion] !== undefined) {
+                    const options = document.querySelectorAll('.quiz-option');
+                    selectOption(userAnswers[currentQuizQuestion], options[userAnswers[currentQuizQuestion]]);
+                }
+            }
+        }
+
+        function showQuizResult() {
+            document.getElementById('quiz-container').classList.add('hidden');
+            document.getElementById('quiz-result').classList.remove('hidden');
+            
+            const percentage = Math.round((quizScore / quizQuestions.length) * 100);
+            
+            document.getElementById('final-score').textContent = `${quizScore}/${quizQuestions.length}`;
+            document.getElementById('score-percentage').textContent = `${percentage}%`;
+            
+            // Set result message based on score
+            let emoji, title, message;
+            if (percentage >= 80) {
+                emoji = '🎉';
+                title = 'Luar Biasa!';
+                message = 'Kamu sangat memahami materi analisis potensi pasar dan peluang usaha!';
+            } else if (percentage >= 60) {
+                emoji = '👍';
+                title = 'Bagus!';
+                message = 'Pemahaman kamu cukup baik, tapi masih bisa ditingkatkan lagi.';
+            } else {
+                emoji = '📚';
+                title = 'Perlu Belajar Lagi';
+                message = 'Jangan menyerah! Coba pelajari materi sekali lagi dan ulangi kuis.';
+            }
+            
+            document.getElementById('result-emoji').textContent = emoji;
+            document.getElementById('result-title').textContent = title;
+            document.getElementById('result-message').textContent = message;
+        }
+
+        function restartQuiz() {
+            initializeQuiz();
+        }
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection('overview');
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'980cb95792754a9b',t:'MTc1ODE1NTMxNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
